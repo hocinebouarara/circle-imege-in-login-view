@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onMouseDragged="#MouseDragged" onMousePressed="#MousePressed" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #311B92; -fx-background-radius: 20px;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="circle.CircleController">
+    <stylesheets>
+        <URL value="@circle.css" />
+    </stylesheets>
+   <children>
+      <Circle fx:id="circle" fill="DODGERBLUE" layoutX="298.0" layoutY="80.0" radius="69.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
+      <Circle fill="#1f93ff00" layoutX="298.0" layoutY="80.0" radius="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="4.0" />
+      <VBox layoutX="171.0" layoutY="192.0">
+         <children>
+            <HBox alignment="CENTER" style="-fx-background-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <FontAwesomeIconView glyphName="USER" size="20" />
+                  <TextField prefHeight="33.0" prefWidth="230.0" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="11.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" style="-fx-background-color: white; -fx-background-radius: 20px;">
+               <children>
+                  <FontAwesomeIconView glyphName="KEY" scaleY="-1.0" size="20">
+                     <HBox.margin>
+                        <Insets left="9.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <PasswordField prefHeight="33.0" prefWidth="235.0" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <JFXButton prefHeight="33.0" prefWidth="267.0" style="-fx-background-color: #263238; -fx-background-radius: 20px;" styleClass="btn" text="Login" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Bauhaus 93" size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <FontAwesomeIconView glyphName="CLOSE" layoutX="566.0" layoutY="32.0" onMouseClicked="#Close" size="25" styleClass="btn" text="" />
+   </children>
+</AnchorPane>
